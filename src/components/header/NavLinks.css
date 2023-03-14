@@ -1,0 +1,27 @@
+.navlinks {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  overflow-y: hidden;
+  transition: height 400ms ease-out;
+}
+
+.isVisible {
+    height: 165px;
+}
+
+.navlinks a {
+  width: 50%;
+  color: white;
+  margin: 5px auto 5px auto;
+  background-color: black;
+  border-radius: 2em;
+  border: 1px solid white;
+  text-align: center;
+  text-decoration: none;
+  transition: 500ms;
+}
+
+.navlinks a:hover {
+  color: red;
+}

@@ -1,5 +1,19 @@
 header {
     width: 100%;
-    background-color: lightgreen;
+    background-color: #2a282b;
     padding: 10px;
+    color: white;
+}
+
+header p {
+    width: 50%;
+}
+
+.headerWrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.font {
+    text-align: right;
 }

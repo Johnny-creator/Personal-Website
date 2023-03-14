@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import HeaderLinks from "./NavLinks";
 import classes from "./Header.module.css";
-import MobileNavLinks from "./MobileNavLinks";
+import NavLinks from "./NavLinks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBarsStaggered } from "@fortawesome/free-solid-svg-icons";
 
 const Header = (props) => {
   const [isActive, setIsActive] = useState(false);
@@ -13,9 +14,12 @@ const Header = (props) => {
 
   return (
     <>
-      <header className={classes.hoverContent}>
-        <p onClick={clickedContent}> Hover Content </p>
-        {isActive && <MobileNavLinks />}
+      <header>
+        <div className={classes.headerWrapper}>
+          <p> Jonathan Nanno </p>
+          <FontAwesomeIcon onClick={clickedContent} className={classes.font} icon={faBarsStaggered} />
+        </div>
+        <NavLinks active={isActive} />
       </header>
     </>
   );
