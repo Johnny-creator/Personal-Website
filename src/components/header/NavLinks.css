@@ -7,21 +7,17 @@
 }
 
 .isVisible {
-    height: 165px;
+    height: 210px;
 }
 
 .navlinks a {
   width: 50%;
-  color: white;
+  color: #35382e;
   margin: 5px auto 5px auto;
-  background-color: black;
-  border-radius: 2em;
-  border: 1px solid white;
+  background-color: aquamarine;
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 3px white;
   text-align: center;
   text-decoration: none;
-  transition: 500ms;
-}
-
-.navlinks a:hover {
-  color: red;
 }
