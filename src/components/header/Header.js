@@ -9,7 +9,6 @@ const Header = (props) => {
 
   const clickedContent = () => {
     setIsActive(!isActive);
-    console.log(isActive);
   };
 
   return (
@@ -17,7 +16,7 @@ const Header = (props) => {
       <header>
         <div className={classes.headerWrapper}>
           <p> Jonathan Nanno </p>
-          <FontAwesomeIcon onClick={clickedContent} className={classes.font} icon={faBarsStaggered} />
+          <FontAwesomeIcon onClick={clickedContent} className={classes.font} icon={faBarsStaggered} size="xl" flip="horizontal"/>
         </div>
         <NavLinks active={isActive} />
       </header>
