@@ -1,14 +1,17 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from 'react-router-dom';
+
 import './NavLinks.css';
 
 const HeaderLinks = (props) => {
   return (
     <div className={`navlinks ${props.active ? 'isVisible' : ''}`}>
-      <a href="/"> About Me </a>
-      <a href="/"> Skills </a>
-      <a href="/"> Projects </a>
-      <a href="/"> Contact </a>
-      <a href="/"> Resume </a>
+      <Link to="/"> Home </Link>
+      <Link to="/about"> About Me </Link>
+      <Link to="/skills"> Skills </Link>
+      <Link to="/projects"> Projects </Link>
+      <Link to="/contact"> Contact </Link>
+      <Link to="/resume"> Resume </Link>
     </div>
   );
 };
