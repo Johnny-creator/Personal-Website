@@ -16,7 +16,7 @@ const Header = (props) => {
       <header>
         <div className={classes.headerWrapper}>
           <p> Jonathan Nanno </p>
-          <FontAwesomeIcon onClick={clickedContent} className={classes.font} icon={faBarsStaggered} size="xl" flip="horizontal"/>
+          <FontAwesomeIcon onClick={clickedContent} className={classes.font} icon={faBarsStaggered} size="2xl" flip="horizontal"/>
         </div>
         <NavLinks active={isActive} />
       </header>
