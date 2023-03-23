@@ -3,9 +3,10 @@ header {
     background-color: #2a282b;
     padding: 10px;
     color: white;
+    font-family: 'Quicksand', sans-serif, Arial, Helvetica, sans-serif;
 }
 
-header p {
+header h3 {
     width: 50%;
     align-self: center;
 }
