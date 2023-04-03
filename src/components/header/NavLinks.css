@@ -8,6 +8,8 @@
 
 .isVisible {
     height: 240px;
+    max-height: 80vh;
+    overflow-y: scroll;
 }
 
 .navlinks a {

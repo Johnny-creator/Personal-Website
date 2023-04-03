@@ -13,7 +13,11 @@ const Home = () => {
         <h3> Hi, my name is Jonathan Nanno and welcome to my website</h3>
         <p> I am a Lambton College CPRO graduate who has a focus for front-end web development. My skills however aren't limited solely to front-end
           as I've handled working with databases, creating backends to give sites functionality, deploying sites and giving them their own domains, and a lot more. </p>
+
+        <p> When I'm not studying or polishing up my web dev skills I spend my time playing video games, working out, or planning my diet. </p>
       </section>
+
+      <MediaLinks size="3x" name1="Resume" name2="LinkedIn" name3="Github"/>
     </div>
   );
 };
