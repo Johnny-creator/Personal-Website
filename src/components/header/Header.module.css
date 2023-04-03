@@ -4,6 +4,8 @@ header {
     padding: 10px;
     color: white;
     font-family: 'Quicksand', sans-serif, Arial, Helvetica, sans-serif;
+    position: fixed;
+    border-bottom: 1px solid black;
 }
 
 header h3 {

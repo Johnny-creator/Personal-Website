@@ -2,4 +2,9 @@
     text-decoration: none;
     color: white;
     margin: 1em;
+    transition: 500ms;
+}
+
+.icon:hover {
+    color: #a8e636;
 }

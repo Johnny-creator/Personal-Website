@@ -1,27 +1,50 @@
 .body {
-    background: rgb(36,46,130);
-    background: -moz-radial-gradient(ellipse at bottom, rgba(36,46,130,1) 0%, rgba(2,0,36,1) 100%);
-    background: -webkit-radial-gradient(ellipse at bottom, rgba(36,46,130,1) 0%, rgba(2,0,36,1) 100%);
-    background: radial-gradient(ellipse at bottom, rgba(36,46,130,1) 0%, rgba(2,0,36,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242e82",endColorstr="#020024",GradientType=1); 
-    color: white;
-    text-align: center;
-    font-family: 'Quicksand', sans-serif, Arial, Helvetica, sans-serif;
+  background: rgb(36, 46, 130);
+  background: -moz-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242e82",endColorstr="#020024",GradientType=1);
+  color: white;
+  text-align: center;
+  font-family: "Quicksand", sans-serif, Arial, Helvetica, sans-serif;
+  padding-top: 50px;
+  padding-bottom: 10px;
 }
 
 .img {
-    width: 55%;
-    height: 55%;
-    border-radius: 50%;
-    padding: 3px;
-    border: 1px solid black;
-    box-shadow: 0px 3px 5px red;
+  width: 55%;
+  height: 55%;
+  border-radius: 50%;
+  padding: 3px;
+  border: 1px solid black;
+  box-shadow: 0px 3px 5px red;
 }
 
+.introduction {
+  padding: 5px;
+  padding-bottom: 0px;
+  margin: 20px auto;
+  width: 80%;
+  background-color: #2a282b;
+  border-radius: 10px;
+  box-shadow: 0px 3px 5px black;
+}
 
 @media only screen and (min-width: 500px) {
-    .img {
-        width: 25%;
-        height: 25%;
-    }
+  .img {
+    width: 25%;
+    height: 25%;
+  }
 }
