@@ -1,10 +1,21 @@
 .icon {
+    display: inline-block;
     text-decoration: none;
     color: white;
     margin: 1em;
     transition: 500ms;
 }
 
+.icon span {
+    display: block;
+}
+
 .icon:hover {
     color: #a8e636;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

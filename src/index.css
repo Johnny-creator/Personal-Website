@@ -12,7 +12,7 @@ code {
     monospace;
 }
 
-#root, #root > div {
+#root, #root > main {
   height: 100%;
   min-height: 100vh;
 }

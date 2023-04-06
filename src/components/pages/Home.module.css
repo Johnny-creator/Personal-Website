@@ -19,7 +19,7 @@
   color: white;
   text-align: center;
   font-family: "Quicksand", sans-serif, Arial, Helvetica, sans-serif;
-  padding-top: 50px;
+  padding-top: 70px;
   padding-bottom: 10px;
 }
 
@@ -46,7 +46,31 @@
   padding-top: 10px;
 }
 
+@media only screen and (min-width: 326px) {
+  .body {
+    padding-top: 50px;
+  }
+}
+
 @media only screen and (min-width: 500px) {
+  .img {
+    width: 40%;
+    height: 40%;
+  }
+
+  .introduction {
+    max-width: 50%;
+    height: 100%;
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .introduction {
+    margin-top: 80px;
+  }
+
   .img {
     width: 25%;
     height: 25%;
