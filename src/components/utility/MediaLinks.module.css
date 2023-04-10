@@ -2,7 +2,7 @@
     display: inline-block;
     text-decoration: none;
     color: white;
-    margin: 1em;
+    margin: 20px;
     transition: 500ms;
 }
 
@@ -12,10 +12,4 @@
 
 .icon:hover {
     color: #a8e636;
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
