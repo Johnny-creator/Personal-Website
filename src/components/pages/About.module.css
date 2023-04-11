@@ -1,0 +1,66 @@
+.body {
+  background: rgb(36, 46, 130);
+  background: -moz-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242e82",endColorstr="#020024",GradientType=1);
+  color: white;
+  text-align: center;
+  font-family: "Quicksand", sans-serif, Arial, Helvetica, sans-serif;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
+.body p {
+  padding-top: 20px;
+}
+
+.body h1 {
+  padding-top: 20px;
+}
+
+
+
+@media only screen and (min-width: 362px) {
+  .body {
+    padding-top: 50px;
+  }
+
+  .container {
+    padding-top: 50px;
+  }
+}
+
+@media only screen and (min-width: 800px) {
+  .body {
+    display: flex;
+    align-items: center;
+    padding-top: 0px;
+  }
+
+  .container {
+    padding-top: 0px;
+    margin: 10px;
+    background-color: #2a282b;
+    font-size: 20px;
+    margin: 0 auto;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 20px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+}
