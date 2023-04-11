@@ -8,7 +8,7 @@ const About = () => {
       <div className={classes.container}>
         <h1> My name is Jonathan Nanno </h1>
     
-        <p> I started into the world of programming when I was 13/14 as I took a Computer Science course in my highschool </p>
+        <p> I started into the world of programming when I was 13/14 years old as I took a Computer Science course in my highschool </p>
     
         <p> From there, I learnt about the basics of programming using an object-based educational program called Alice. My learning moved on and once we got ahold of the basics we were taught using Turing and Microsoft Visual Basic. In the final year, we got to handle working with Java. </p>
     
