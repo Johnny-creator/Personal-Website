@@ -11,6 +11,10 @@ const Header = (props) => {
     setIsActive(!isActive);
   };
 
+  const closeContent = () => {
+    setIsActive(false);
+  };
+
   return (
     <>
       <header>
@@ -26,6 +30,7 @@ const Header = (props) => {
         </div>
         <NavLinks className={classes.mobile} active={isActive} />
       </header>
+      {isActive && <div className={classes.modal} onClick={closeContent}></div>}
     </>
   );
 };

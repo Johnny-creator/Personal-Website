@@ -1,11 +1,11 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
-import './NavLinks.css';
+import "./NavLinks.css";
 
 const HeaderLinks = (props) => {
   return (
-    <div className={`navlinks ${props.active ? 'isVisible' : ''}`}>
+    <div className={`navlinks ${props.active ? "isVisible" : ""}`}>
       <Link to="/"> Home </Link>
       <Link to="/about"> About Me </Link>
       <Link to="/skills"> Skills </Link>

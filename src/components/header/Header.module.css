@@ -6,6 +6,7 @@ header {
     font-family: 'Quicksand', sans-serif, Arial, Helvetica, sans-serif;
     position: fixed;
     border-bottom: 1px solid black;
+    z-index: 2;
 }
 
 header h3 {
@@ -22,7 +23,22 @@ header h3 {
     text-align: right;
 }
 
+.modal {
+    background-color: black;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
 @media only screen and (min-width: 800px) {
+    .modal {
+        display: none;
+    }
+
     header {
         position: relative;
     }
