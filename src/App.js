@@ -4,6 +4,7 @@ import Home from "./components/pages/Home";
 import Header from "./components/header/Header";
 import Footer from './components/footer/Footer';
 import About from "./components/pages/About";
+import Skills from './components/pages/Skills';
 import Error from "./components/pages/Error";
 
 import "./App.css";
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="*" element={<Error />} />
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/skills" element={<Skills />} />
       </Routes>
       <Footer />
     </BrowserRouter>
