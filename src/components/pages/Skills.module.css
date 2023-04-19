@@ -1,0 +1,45 @@
+.body {
+  background: rgb(36, 46, 130);
+  background: -moz-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242e82",endColorstr="#020024",GradientType=1);
+  color: white;
+  text-align: center;
+  font-family: "Quicksand", sans-serif, Arial, Helvetica, sans-serif;
+  padding-top: 70px;
+  padding-bottom: 10px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.container img {
+    border-radius: 50%;
+    display: flex;
+    margin: 5px;
+    width: 100px;
+}
+
+@media only screen and (min-width: 800px) {
+  .container img {
+    width: 200px;
+  }
+}
