@@ -9,7 +9,12 @@ const Skills = () => {
   const imgArray = () => {
     for (let i = 0; i < ImageArray.length; i++) {
       let single = ImageArray[i];
-      items.push(<img key={i} src={single.img} alt={single.name} />);
+      items.push(
+        <div className={classes.child} key={i}>
+          <img src={single.img} alt={single.name} />
+          <p> {single.name}</p>
+        </div>
+      );
     }
     return items;
   };
@@ -17,9 +22,7 @@ const Skills = () => {
   return (
     <main className={classes.body}>
       <h1> Skills </h1>
-      <div className={classes.container}>
-        {imgArray()}
-      </div>
+      <div className={classes.container}>{imgArray()}</div>
     </main>
   );
 };
