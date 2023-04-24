@@ -6,7 +6,7 @@ const About = () => {
   return (
     <main className={classes.body}>
       <div className={classes.container}>
-        <h1> My name is Jonathan Nanno </h1>
+        <h1> <u> My name is Jonathan Nanno </u> </h1>
     
         <p> I started into the world of programming when I was 13/14 years old as I took a Computer Science course in my highschool </p>
     
