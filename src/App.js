@@ -6,8 +6,10 @@ import Footer from './components/footer/Footer';
 import About from "./components/pages/About";
 import Skills from './components/pages/Skills';
 import Error from "./components/pages/Error";
+import Projects from "./components/pages/Projects";
 
 import "./App.css";
+
 
 const App = () => {
   return (
@@ -18,6 +20,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
+        <Route path="/projects" element={<Projects />} />
       </Routes>
       <Footer />
     </BrowserRouter>
