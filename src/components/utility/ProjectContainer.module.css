@@ -1,0 +1,15 @@
+.projectContainer {
+    border: 1px solid #083e00;
+    background-color: #0000006e;
+    border-radius: 2em;
+    margin: 5px;
+}
+
+.projectContainer img {
+    border-radius: 2em;
+    width: 70%;
+}
+
+.projectContainer h1 {
+    display: inline-block;
+}
