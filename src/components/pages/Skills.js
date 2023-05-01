@@ -21,7 +21,7 @@ const Skills = () => {
 
   return (
     <main className={classes.body}>
-      <h1> Skills </h1>
+      <h1> My Skills</h1>
       <div className={classes.container}>{imgArray()}</div>
     </main>
   );
