@@ -5,11 +5,28 @@
     margin: 5px;
 }
 
+.projectContainer:hover {
+    cursor: pointer;
+}
+
 .projectContainer img {
+    margin: 0 auto;
+    display: block;
     border-radius: 2em;
     width: 70%;
 }
 
 .projectContainer h1 {
-    display: inline-block;
+    display: inline;
+    text-align: center;
+}
+
+.hidden {
+    margin-top: 40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.projectContainer:hover > .hidden {
+    opacity: 1;
 }
