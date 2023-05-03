@@ -19,9 +19,11 @@ const Projects = () => {
 
   return (
     <main className={classes.body}>
-      <div className={classes.box}>
-        <ProjectContainer onClick={showModal} name="test" img={personalPhoto} imgName="Terry"/>
-      </div>
+      <ProjectContainer onClick={showModal} name="test1" img={personalPhoto} imgName="Terry"/>
+      <ProjectContainer onClick={showModal} name="test2" img={personalPhoto} imgName="Terry"/>
+      <ProjectContainer onClick={showModal} name="test3" img={personalPhoto} imgName="Terry"/>
+      <ProjectContainer onClick={showModal} name="test4" img={personalPhoto} imgName="Terry"/>
+      <ProjectContainer onClick={showModal} name="test5" img={personalPhoto} imgName="Terry"/>
       <AnimatePresence initial={false} mode='wait'>
         {modal && <ProjectModal hide={hideModal} title="This is a test" image={personalPhoto}> Test </ProjectModal>}
       </AnimatePresence>
