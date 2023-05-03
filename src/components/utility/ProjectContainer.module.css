@@ -21,12 +21,10 @@
     text-align: center;
 }
 
-.hidden {
-    margin-top: 40px;
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-.projectContainer:hover > .hidden {
-    opacity: 1;
+.click {
+    margin: 40px auto;
+    padding: 5px;
+    width: 50%;
+    border: 1px solid white;
+    border-radius: 1em;
 }

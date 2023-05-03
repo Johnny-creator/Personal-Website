@@ -13,7 +13,7 @@
 
 .modal {
   width: clamp(50%, 700px, 90%);
-  height: min(50%, 800px);
+  height: min(80%, 800px);
   background-color: white;
   border-radius: 1em;
   overflow: hidden;
@@ -23,4 +23,8 @@
 
 .content {
   color: black;
+}
+
+.modal img {
+   width: 100%;
 }
