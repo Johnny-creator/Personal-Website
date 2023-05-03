@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 
 const ProjectModal = (props) => {
 
-  const dropIn = {
+  const appearDisappear = {
     hidden: {
       scale: 0,
     },
@@ -25,7 +25,7 @@ const ProjectModal = (props) => {
   return (
     <>
       <div className={classes.backdrop} onClick={props.hide} >
-        <motion.div onClick={(e) => e.stopPropagation()} variants={dropIn} initial="hidden" animate="visible" exit="exit" className={classes.modal}>
+        <motion.div onClick={(e) => e.stopPropagation()} variants={appearDisappear} initial="hidden" animate="visible" exit="exit" className={classes.modal}>
           <h1> {props.name} </h1>
           <h1>{props.title}</h1>
           <div className={classes.content}> {props.children} <img src={props.image}></img> </div>
