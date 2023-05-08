@@ -26,9 +26,10 @@ const ProjectModal = (props) => {
     <>
       <div className={classes.backdrop} onClick={props.hide} >
         <motion.div onClick={(e) => e.stopPropagation()} variants={appearDisappear} initial="hidden" animate="visible" exit="exit" className={classes.modal}>
-          <img src={props.image}></img>
-          <h1>{props.title}</h1>
-          <div className={classes.content}> {props.children} </div>
+          <img src={props.data.image} alt={props.data.alt}></img>
+          <h1>{props.data.title}</h1>
+          <div className={classes.content}> {props.data.content} </div>
+          <button className={classes.button} onClick={props.hide}> Close Box </button>
         </motion.div>
       </div>
     </>
