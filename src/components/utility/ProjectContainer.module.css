@@ -3,6 +3,10 @@
     background-color: #0000006e;
     border-radius: 2em;
     margin: 5px;
+    max-height: 463px;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 300px;
 }
 
 .projectContainer:hover {
