@@ -1,32 +1,36 @@
 import React, { useState } from "react";
 import ProjectModal from "../utility/ProjectModal";
 import ProjectContainer from "../utility/ProjectContainer";
-import personalPhoto from "./../../images/PersonalPhoto.png";
+import ModalArray from '../utility/ModalArray';
 import{ AnimatePresence } from 'framer-motion';
 
 import classes from "./Projects.module.css";
 
 const Projects = () => {
-  const [modal, setModal] = useState(false);
+  const [modal, setModal] = useState({show: false, data: ModalArray[0]});
 
-  const showModal = () => {
-    setModal(true);
+  const openIndexOne = () => {
+    setModal({show: true, data: ModalArray[0]});
+  }
+
+  const openIndexTwo = () => {
+    setModal({ show: true, data: ModalArray[1]})
   }
 
   const hideModal = () => {
-    setModal(false);
+    setModal({show: false, data: null});
   }
 
   return (
     <main className={classes.body}>
-      <ProjectContainer onClick={showModal} name="test1" img={personalPhoto} imgName="Terry"/>
-      <ProjectContainer onClick={showModal} name="test2" img={personalPhoto} imgName="Terry"/>
-      <ProjectContainer onClick={showModal} name="test3" img={personalPhoto} imgName="Terry"/>
-      <ProjectContainer onClick={showModal} name="test4" img={personalPhoto} imgName="Terry"/>
-      <ProjectContainer onClick={showModal} name="test5" img={personalPhoto} imgName="Terry"/>
-      <AnimatePresence initial={false} mode='wait'>
-        {modal && <ProjectModal hide={hideModal} title="This is a test" image={personalPhoto}> Test </ProjectModal>}
-      </AnimatePresence>
+      <h1> My Projects </h1>
+      <div className={classes.projectFlex}>
+        <ProjectContainer onClick={openIndexOne} name={ModalArray[0].title} img={ModalArray[0].image} imgAlt={ModalArray[0].alt}/>
+        <ProjectContainer onClick={openIndexTwo} name={ModalArray[1].title} img={ModalArray[1].image} imgAlt={ModalArray[1].alt}/>
+        <AnimatePresence initial={false} mode='wait'>
+          {modal.show && <ProjectModal hide={hideModal} data={modal.data}> Test </ProjectModal>}
+        </AnimatePresence>
+      </div>
     </main>
   );
 };
