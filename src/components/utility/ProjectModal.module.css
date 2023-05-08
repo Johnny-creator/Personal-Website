@@ -19,6 +19,7 @@
   overflow: hidden;
   color: black;
   z-index: 11;
+  overflow-y: auto;
 }
 
 .content {
@@ -26,5 +27,17 @@
 }
 
 .modal img {
-   width: 100%;
+  width: 100% !important;
+  height: auto !important;
+}
+
+.button {
+  display: block;
+  width: 50%;
+  max-width: 300px;
+  padding: 5px;
+  color: #35382e;
+  margin: auto;
+  background-color: aquamarine;
+  border-radius: 10px;
 }
