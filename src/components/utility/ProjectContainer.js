@@ -20,7 +20,7 @@ const ProjectContainer = (props) => {
       className={classes.projectContainer}
     >
       <h1> {props.name} </h1>
-      <img src={props.img} alt={props.imageName} />
+      <img src={props.img} alt={props.imgAlt} />
       <p> Information about the project </p>
       <motion.div variants={moveDown} className={classes.click}>
         {" "}
