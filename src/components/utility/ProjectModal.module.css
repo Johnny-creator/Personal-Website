@@ -13,6 +13,7 @@
 
 .modal {
   width: clamp(30%, 300px, 90%);
+  height: clamp(80%, 410px, 90%);
   padding-bottom: 5px;
   background-color: white;
   border-radius: 1em;
@@ -31,6 +32,10 @@
   height: auto !important;
 }
 
+.modal p {
+  font-size: 20px;
+}
+
 .button {
   display: block;
   width: 50%;
@@ -40,16 +45,5 @@
   margin: auto;
   background-color: aquamarine;
   border-radius: 10px;
-}
-
-@media only screen and (min-width: 500px) {
-  .modal {
-    width: clamp(50%, 700px, 90%);
-    height: min(80%, 800px);
-  }
-
-  .modal img {
-    object-fit: fill !important;
-    height: 393px !important;
-  }
+  margin-top: 20px;
 }
