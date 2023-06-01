@@ -9,6 +9,7 @@ import Error from "./components/pages/Error";
 import Projects from "./components/pages/Projects";
 
 import "./App.css";
+import Contact from "./components/pages/Contact";
 
 
 const App = () => {
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/skills" element={<Skills />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </BrowserRouter>
