@@ -1,47 +1,88 @@
 .body {
-    background: rgb(36, 46, 130);
-    background: -moz-radial-gradient(
-      ellipse at bottom,
-      rgba(36, 46, 130, 1) 0%,
-      rgba(2, 0, 36, 1) 100%
-    );
-    background: -webkit-radial-gradient(
-      ellipse at bottom,
-      rgba(36, 46, 130, 1) 0%,
-      rgba(2, 0, 36, 1) 100%
-    );
-    background: radial-gradient(
-      ellipse at bottom,
-      rgba(36, 46, 130, 1) 0%,
-      rgba(2, 0, 36, 1) 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242e82",endColorstr="#020024",GradientType=1);
-    color: white;
-    text-align: center;
-    font-family: "Quicksand", sans-serif, Arial, Helvetica, sans-serif;
-    padding-top: 70px;
-    padding-bottom: 10px;
-    display: flex;
-    align-items: center;
-    padding-top: 0px;
-  }
+  background: rgb(36, 46, 130);
+  background: -moz-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  background: radial-gradient(
+    ellipse at bottom,
+    rgba(36, 46, 130, 1) 0%,
+    rgba(2, 0, 36, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#242e82",endColorstr="#020024",GradientType=1);
+  color: white;
+  text-align: center;
+  font-family: "Quicksand", sans-serif, Arial, Helvetica, sans-serif;
+  padding-top: 70px;
+  padding-bottom: 10px;
+  display: flex;
+  align-items: center;
+  padding-top: 0px;
+}
 
-  .form {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    border-radius: 1em;
-    background-color: white;
-    color: black;
-  }
+.motion {
+  width: 100%;
+}
 
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 60vh;
+  margin: 0 auto;
+  box-shadow: 0px 3px 5px red;
+  border-radius: 1em;
+  background-color: white;
+  color: black;
+  max-width: 800px;
+  max-height: 500px;
+  min-height: 240px;
+  font-size: 20px;
+}
+
+.form input {
+  width: 95%;
+}
+
+.form textarea {
+  width: 95%;
+  height: 100%;
+  resize: none;
+}
+
+.form button {
+  width: 50%;
+  max-width: 100px;
+  min-width: 50px;
+  padding: 5px;
+  color: #35382e;
+  margin: 5px;
+  background-color: aquamarine;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.form button:hover {
+  scale: 1.2;
+}
+
+.invalid {
+  color: red;
+}
+
+
+@media only screen and (min-width: 800px) {
   .form input {
-    width: 95%;
+    width: 50%;
   }
-
-  .form textarea {
-    width: 95%;
-  }
+}

@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import classes from "./ProjectContainer.module.css";
 
 const ProjectContainer = (props) => {
-  const moveDown = {
+  const expand = {
     animate: {
       scale: 1.3,
       transition: {
@@ -22,9 +22,8 @@ const ProjectContainer = (props) => {
       <h1> {props.name} </h1>
       <img src={props.img} alt={props.imgAlt} />
       <p> Information about the project </p>
-      <motion.div variants={moveDown} className={classes.click}>
-        {" "}
-        <p> Click for more Information </p>{" "}
+      <motion.div variants={expand} className={classes.click}>
+        <p> Click for more Information </p>
       </motion.div>
     </motion.div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import ImageArray from "../utility/ImageArray";
+import{ AnimatePresence, motion } from 'framer-motion';
 
 import classes from "./Skills.module.css";
 
@@ -21,8 +22,10 @@ const Skills = () => {
 
   return (
     <main className={classes.body}>
-      <h1> My Skills</h1>
-      <div className={classes.container}>{imgArray()}</div>
+      <motion.div initial={{opacity: 0}} animate={{ opacity: 1}} exit={{opacity: 0 }}>
+        <h1> My Skills</h1>
+        <div className={classes.container}>{imgArray()}</div>
+      </motion.div>
     </main>
   );
 };
