@@ -1,4 +1,4 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 import classes from "./Contact.module.css";
 import{ motion } from 'framer-motion';
 
