@@ -8,15 +8,30 @@ const Contact = () => {
   const [formErrors, setFormErrors] = useState({});
   const [isSubmit, setIsSubmit] = useState(false);
 
+  const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormValues({...formValues, [name]: value });
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
     setFormErrors(validate(formValues));
+
+    fetch("/contact", {
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      body: encode({ "form-name": "contact", ...this.state })
+    })
+      .then(() => alert("Success!"))
+      .catch(error => alert(error));
+
     setIsSubmit(true);
+    e.preventDefault();
   }
 
   const validate = (values) => {
