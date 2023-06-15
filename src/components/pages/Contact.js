@@ -1,70 +1,68 @@
 import react, { useState } from "react";
 import classes from "./Contact.module.css";
-import{ AnimatePresence, motion } from 'framer-motion';
+import{ motion } from 'framer-motion';
 
 const Contact = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [nameIsValid, setNameIsValid]  = useState(true);
-  const [emailIsValid, setEmailIsValid]  = useState(true);
-  const [messageIsValid, setMessageIsValid]  = useState(true);
+  const initialState = {name: "", email: "", message: ""};
+  const [formValues, setFormValues] = useState({initialState});
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmit, setIsSubmit] = useState(false);
 
-  const nameChangeHandler = (event) => {
-    setName(event.target.value);
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues({...formValues, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setFormErrors(validate(formValues));
+    setIsSubmit(true);
   }
 
-  const emailChangeHandler = (event) => {
-    setEmail(event.target.value);
+  const validate = (values) => {
+    const errors = {};
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/i;
+
+    if (!values.name) {
+      errors.name = "Name is required."
+    }
+
+    if (!values.email) {
+      errors.email = "Email is required.";
+    } else if (!regex.test(values.email)) {
+      errors.email = "This is not a valid email format (Did you forget @, or .com?)";
+    }
+
+    if (!values.message) {
+      errors.message = "Message is required";
+    }
+
+    return errors;
   }
 
-  const messageChangeHandler = (event) => {
-    setMessage(event.target.value);
-  }
-
-  const submitForm = (event) => {
-    event.preventDefault();
-
-    if (name.trim().length === 0) {
-      setNameIsValid(false);
-      console.log("False");
-    }
-
-    if (email.trim().length === 0) {
-      setEmailIsValid(false);
-    }
-
-    if (message.trim().length === 0) {
-      setMessageIsValid(false);
-    }
-
-    if (!nameIsValid || !emailIsValid || !messageIsValid) {
-      return;
-    }
-    
-    setName("");
-    setEmail("");
-    setMessage("");
-  }
 
   return (
     <main className={classes.body}>
       <motion.div className={classes.motion} initial={{opacity: 0}} animate={{ opacity: 1}} exit={{opacity: 0 }}>
-        <form className={classes.form} onSubmit={submitForm}>
+        <form name="contact" className={classes.form} onSubmit={handleSubmit}>
           <h1> Contact Me! </h1>
+          
+          <input type="hidden" name="form-name" value="contact" />
           <label> Name </label>
-          {!nameIsValid && <p className={classes.invalid}> Name is not valid </p>}
-          <input type="text" onChange={nameChangeHandler} value={name}></input>
-
+          <p className={classes.invalid}> {formErrors.name} </p>
+          <input name="name" type="text" onChange={handleChange}></input>
+          
           <label> Email </label>
-          {!emailIsValid && <p  className={classes.invalid}> Email is not valid </p>}
-          <input type="email" onChange={emailChangeHandler} value={email}></input>
-
+          <p className={classes.invalid}> {formErrors.email} </p>
+          <input name="email" type="email" onChange={handleChange}></input>
+          
           <label> Message </label>
-          {!messageIsValid && <p className={classes.invalid}> Message is not valid </p>}
-          <textarea onChange={messageChangeHandler} value={message}></textarea>
+          <p className={classes.invalid}> {formErrors.message} </p>
+          <textarea name="message" onChange={handleChange}></textarea>
+          
           <button type="submit"> Submit </button>
         </form>
+        {Object.keys(formErrors).length === 0 && isSubmit ? <p> Submitted Successfully</p> : "" }
       </motion.div>
     </main>
   );
