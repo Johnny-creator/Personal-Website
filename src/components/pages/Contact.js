@@ -14,8 +14,7 @@ const Contact = () => {
         .join("&");
   }
 
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = () => {
     setIsSubmitted(true);
     fetch("/", {
       method: "POST",
