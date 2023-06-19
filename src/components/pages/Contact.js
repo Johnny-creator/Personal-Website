@@ -32,7 +32,7 @@ const Contact = () => {
         <form name="contact" className={classes.form} onSubmit={handleSubmit(onSubmit)}>
           <h1> Contact Me! </h1>
 
-          <input type="hidden" name="form-name" value="contact" />
+          <input type="hidden" name="contact" value="contact" />
 
           <label> Name </label>
           {errors.name && <p className={classes.invalid}> Name is required </p>}
