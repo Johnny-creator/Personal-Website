@@ -14,12 +14,12 @@ const Contact = () => {
         .join("&");
   }
 
-  const onSubmit = () => {
+  const onSubmit = (data) => {
     setIsSubmitted(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: encode({ "form-name": "contact", ...this.state })
+      body: encode({ "form-name": "contact", ...data, }),
     })
       .then(() => alert("Success!"))
       .catch(error => alert(error));
@@ -29,7 +29,7 @@ const Contact = () => {
     <main className={classes.body}>
       <motion.div className={classes.motion} initial={{opacity: 0}} animate={{ opacity: 1}} exit={{opacity: 0 }}>
 
-        <form name="contact" className={classes.form} onSubmit={handleSubmit(onSubmit)}>
+        <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/" className={classes.form} onSubmit={handleSubmit(onSubmit)}>
           <h1> Contact Me! </h1>
 
           <input type="hidden" name="contact" value="contact" />
