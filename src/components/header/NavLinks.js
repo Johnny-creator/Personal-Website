@@ -1,5 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import pdf from '../../files/Jonathan Nanno Online Resume.pdf'
+
+
 
 import "./NavLinks.css";
 
@@ -11,7 +14,7 @@ const HeaderLinks = (props) => {
       <Link to="/skills"> Skills </Link>
       <Link to="/projects"> Projects </Link>
       <Link to="/contact"> Contact </Link>
-      <Link to="/resume"> Resume </Link>
+      <a href={pdf} target="_blank" rel="noreferrer"> Resume </a>
     </div>
   );
 };
