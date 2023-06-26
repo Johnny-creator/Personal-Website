@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./Home.module.css";
-import testPhoto from "../../images/PersonalPhoto.png";
+import personalPhoto from "../../images/PersonalPhoto.jpg";
 import MediaLinks from "../utility/MediaLinks";
 import{ AnimatePresence, motion } from 'framer-motion';
 
@@ -10,7 +10,7 @@ const Home = () => {
   <main className={classes.body}>
     <motion.div initial={{opacity: 0}} animate={{ opacity: 1}} exit={{opacity: 0 }}>
         <h1> Freelance Front-end developer </h1>
-        <img className={classes.img} src={testPhoto} alt="Personal Photo" />
+        <img className={classes.img} src={personalPhoto} alt="Personal Photo" />
         <section className={classes.introduction}>
           <h3> Hi, my name is Jonathan Nanno and welcome to my website</h3>
           <p> I am a Lambton College CPRO graduate who has a focus for front-end web development. My skills however aren't limited solely to front-end

@@ -76,11 +76,11 @@
 
 @media only screen and (min-width: 1200px) {
   .introduction {
-    margin-top: 80px;
+    margin-top: 40px;
   }
 
   .img {
-    width: 25%;
+    width: 30%;
     height: 25%;
   }
 }
