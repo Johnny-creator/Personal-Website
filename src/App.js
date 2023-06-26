@@ -8,6 +8,7 @@ import Skills from './components/pages/Skills';
 import Error from "./components/pages/Error";
 import Projects from "./components/pages/Projects";
 
+
 import "./App.css";
 import Contact from "./components/pages/Contact";
 
