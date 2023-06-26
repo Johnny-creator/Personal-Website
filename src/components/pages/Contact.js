@@ -4,7 +4,7 @@ import{ motion } from 'framer-motion';
 import { useForm } from "react-hook-form";
 
 const Contact = () => {
-  const {register, handleSubmit, formState: {errors} } = useForm();
+  const {register, handleSubmit, reset, formState: {errors} } = useForm();
 
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -15,14 +15,16 @@ const Contact = () => {
   }
 
   const onSubmit = (data) => {
-    setIsSubmitted(true);
     fetch("/", {
       method: "POST",
       headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: encode({ "form-name": "contact", ...data, }),
     })
-      .then(() => alert("Success!"))
-      .catch(error => alert(error));
+      .then(() => {
+        reset()
+        setIsSubmitted(true)
+      })
+      .catch(() => alert("An error has occurred"));
   }
 
   return (
@@ -47,7 +49,7 @@ const Contact = () => {
           <textarea {...register("message", { required: true, onChange: () => {setIsSubmitted(false);} })} name="message"></textarea>
           
           <button type="submit"> Submit </button>
-          {isSubmitted && <p> Form has been submitted </p>}
+          {isSubmitted && <p className={classes.valid}> Form has been submitted </p>}
         </form>
 
       </motion.div>
