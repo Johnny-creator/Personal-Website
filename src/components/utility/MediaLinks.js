@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faFile } from "@fortawesome/free-solid-svg-icons";
+import pdf from '../../files/Jonathan Nanno Online Resume.pdf'
 
 import classes from "./MediaLinks.module.css";
 
@@ -10,7 +11,7 @@ const MediaLinks = (props) => {
     <>
       <div className={classes.container}>
         <a className={classes.icon}
-          href="/" 
+          href={pdf} 
           target="_blank" 
           rel="noreferrer"
         >
