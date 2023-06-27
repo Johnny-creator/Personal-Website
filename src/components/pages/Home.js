@@ -1,7 +1,7 @@
 import React from "react";
 
 import classes from "./Home.module.css";
-import personalPhoto from "../../images/PersonalPhoto.jpg";
+import personalPhoto from "../../images/HomePhoto.jpg";
 import MediaLinks from "../utility/MediaLinks";
 import{ AnimatePresence, motion } from 'framer-motion';
 
