@@ -9,7 +9,7 @@ const Home = () => {
   return (
   <main className={classes.body}>
     <motion.div initial={{opacity: 0}} animate={{ opacity: 1}} exit={{opacity: 0 }}>
-        <h1> Freelance Front-end developer </h1>
+        <h1> Freelance Full Stack Developer </h1>
         <img className={classes.img} src={personalPhoto} alt="Personal Photo" />
         <section className={classes.introduction}>
           <h3> Hi, my name is Jonathan Nanno and welcome to my website</h3>
