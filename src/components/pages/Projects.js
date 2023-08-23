@@ -29,7 +29,7 @@ const Projects = () => {
           <ProjectContainer onClick={openIndexOne} name={ModalArray[0].title} img={ModalArray[0].image} imgAlt={ModalArray[0].alt}/>
           <ProjectContainer onClick={openIndexTwo} name={ModalArray[1].title} img={ModalArray[1].image} imgAlt={ModalArray[1].alt}/>
           <AnimatePresence initial={false} mode='wait'>
-            {modal.show && <ProjectModal hide={hideModal} data={modal.data}> Test </ProjectModal>}
+            {modal.show && <ProjectModal hide={hideModal} data={modal.data}></ProjectModal>}
           </AnimatePresence>
         </div>
       </motion.div>

@@ -29,6 +29,8 @@ const ProjectModal = (props) => {
           <img src={props.data.image} alt={props.data.alt}></img>
           <h1>{props.data.title}</h1>
           <div className={classes.content}> <p>{props.data.content}</p> </div>
+          <br />
+          <a href="https://www.sheldonc.ca/" target="_blank" rel="noreferrer"> Sheldon Codlings Portfolio</a>
           <button className={classes.button} onClick={props.hide}> Close Box </button>
         </motion.div>
       </div>

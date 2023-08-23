@@ -21,7 +21,6 @@ const ProjectContainer = (props) => {
     >
       <h1> {props.name} </h1>
       <img src={props.img} alt={props.imgAlt} />
-      <p> Information about the project </p>
       <motion.div variants={expand} className={classes.click}>
         <p> Click for more Information </p>
       </motion.div>
